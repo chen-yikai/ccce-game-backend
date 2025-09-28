@@ -4,6 +4,7 @@ import generateRoute from "./routes/generate";
 
 const app = new OpenAPIHono();
 
+app.get("/", (c) => c.json({ message: "CCCE Game Backend" }));
 app.route("/generate", generateRoute);
 
 Bun.serve({
